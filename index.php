@@ -7,12 +7,9 @@
   
     <title>IMIPE Instituto Municipal de Investigación, Planeación y Estadística</title>
     
-    <link rel="icon" 
-    type="image/png" 
-    href="imipefav.png">
-
+    <link rel="icon"  type="image/png"  href="imipefav.png">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" >
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="principal.css" />
     <script src="//code.jquery.com/jquery-3.4.1.min.js" ></script> 
   
@@ -24,8 +21,48 @@
 </script>
 
 </head>
+<style type="text/css" media="screen">
+  .social {
+  position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  left: -20; /* Establecemos la barra en la izquierda */
+  top: 30px; /* Bajamos la barra 200px de arriba a abajo */
+  z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+  .social ul {
+    list-style: none;
+  }
+ 
+  .social ul li a {
+    display: inline-block;
+    color:#fff;
+    background: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+  }
+ 
+  .social ul li .fa-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+  .social ul li .fa-twitter {background: #00abf0;}
+  .social ul li .fa-googleplus {background: #d95232;}
 
+ 
+  .social ul li a:hover {
+    background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+    padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+  }
+</style>
 <body>
+  <div class="social">
+    <ul>
+  <li><a href="http://www.facebook.com/IMIPE-Celaya-1193637920761526/?epa=SEARCH_BOX" target="_blank" class="fa-facebook"></a></li>
+  <li><a href="http://www.twitter.com/IMIPE_Celaya" target="_blank" class="fa-twitter"></a></li>
+  <li><a href="http://www.googleplus.com/IMIPE_Celaya" target="_blank" class="fa-google-plus"></a></li>
+    </ul>
+  </div>
+
 
 <!-- HEADER -->
 <div id="head-top">   
@@ -45,24 +82,28 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav" style="text-align:center;">
+    <ul class="navbar-nav" style="text-align:center;padding-left: 790px;">
+      
       <li class="nav-item active" style="background:#5FB404;">
         <a class="nav-link text-white font-weight-bold" style="cursor: pointer;" onclick="cargarDiv('#contenido','archivo.php');">INICIO</a>
       </li>
+
       <li class="nav-item dropdown" style="background:#3186b2;">
-        <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Estadisticas
-        </a>
-        
+        <a class="nav-link text-white font-weight-bold"  href="#" >
+          Estadísticas
+        </a>        
       </li>
+
       <li class="nav-item" style="background:#ff6f3c;">
         <a class="nav-link text-white font-weight-bold" href="Tramites/tramites_imipe.html">Documentos</a>
       </li>
+
       <li class="nav-item dropdown" style="background:#e8b844;">
-        <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link text-white font-weight-bold" href="#" >
           Mapas
         </a>
        </li>
+
 	  <li class="nav-item" style="background:#588c73;">
         <a class="nav-link text-white font-weight-bold" href="web_construccion.html">Contacto</a>
       </li>
@@ -121,13 +162,13 @@
 <!-- CONTENIDO -->
 <div id="contenido">
                 <div id="txthome1">
-          			<center>INSTITUTO MUNICIPAL DE INVESTIGACION , PLANEACION Y ESTADISTICA</center>
+          			<center>INSTITUTO MUNICIPAL DE INVESTIGACIÓN   PLANEACIÓN Y ESTADÍSTICA</center>
               </div>
 
                 <br><br><br><br><br><br>
                <div id="txthome2">
                 
-                  El instituto de investoigacion , Planeacio y Estadistica , se plantea como un organismo publiuco decentralizado de la administracion publica municipal, con personalidad juridica y patrimonio propios; que tiene como funcion, auxiliar al Ayuntamiento en el cumplimiento de las funciones que le contine la Ley Organica Muniocipal para el Estado de Guanajuato.
+                 El instituto de investigación, Planeación y Estadística, se plantea como un organismo público descentralizado de la administración pública municipal, con personalidad jurídica y patrimonio propios; que tiene como función, auxiliar al Ayuntamiento en el cumplimiento de las funciones que le contiene la Ley Orgánica Municipal para el Estado de Guanajuato.
                
               </div>
 
