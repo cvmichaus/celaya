@@ -82,7 +82,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav" style="text-align:center;padding-left: 790px;">
+    <ul class="navbar-nav" style="text-align:center;padding-left: 750px;">
       
       <li class="nav-item active" style="background:#5FB404;">
         <a class="nav-link text-white font-weight-bold" style="cursor: pointer;" onclick="cargarDiv('#contenido','archivo.php');">INICIO</a>
@@ -104,7 +104,11 @@
         </a>
        </li>
 
-	  <li class="nav-item" style="background:#588c73;">
+        <li class="nav-item" style="background:#588c73;">
+        <a class="nav-link text-white font-weight-bold" style="cursor: pointer;" onclick="cargarDiv('#contenido','participacion.php');"> Participacion</a>
+      </li>
+
+	  <li class="nav-item" style="background:#3186b2;">
         <a class="nav-link text-white font-weight-bold" href="web_construccion.html">Contacto</a>
       </li>
 <!--
