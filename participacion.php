@@ -3,7 +3,8 @@
 Participar en la planeación de la movilidad urbana es, al mismo tiempo, un derecho y una responsabilidad para la ciudadania. La visión de movilidad urbana sustentable que se concibe para Mérida requiere su integralidad como sistema a fin de facilitar el acceso a los beneficios de la ciudad. Alcanzar ese fin requiere objetivos, estrategias y medios para lograrlo. La propuesta que se somete a consulta trata de eso.
 </p>
 <hr>
-<form enctype="multipart/form-data" action="" method="post" name="formulario">
+
+<form  enctype="multipart/form-data" id="formuploadajax" method="post" >
 
  <div class="form-group row">
     <label for="nombre" class="col-sm-2 col-form-label">NOMBRE</label>
@@ -23,7 +24,7 @@ Participar en la planeación de la movilidad urbana es, al mismo tiempo, un dere
  <div class="form-group row">
     <label for="propuesta" class="col-sm-2 col-form-label">PROPUESTA</label>
     <div class="col-sm-10">
-      <input type="file" class="form-control" id="propuesta" name="propuesta" placeholder="Propuesta">
+      <input type="file" class="form-control" id="archivo" name="archivo" placeholder="Propuesta">
     </div>
   </div>
 
@@ -40,4 +41,33 @@ Participar en la planeación de la movilidad urbana es, al mismo tiempo, un dere
     <input type="submit" class="btn btn-primary mb-2" value="Guardar"/>
 
 </form>
+
+  <div id="mensaje"></div>
+
+ <script src="//code.jquery.com/jquery-3.4.1.min.js" ></script> 
+
+  <script>
+  $(function(){
+        $("#formuploadajax").on("submit", function(e){
+            e.preventDefault();
+            var f = $(this);
+            var formData = new FormData(document.getElementById("formuploadajax"));
+            formData.append("dato", "valor");
+            //formData.append(f.attr("name"), $(this)[0].files[0]);
+            $.ajax({
+                url: "GuardaParticipacion.php",
+                type: "post",
+                dataType: "html",
+                data: formData,
+                cache: false,
+                contentType: false,
+       processData: false
+            })
+                .done(function(res){
+                    $("#mensaje").html("Respuesta: " + res);
+                });
+        });
+    });
+
+</script>
 
