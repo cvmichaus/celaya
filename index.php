@@ -99,7 +99,7 @@
       </li>
 
       <li class="nav-item dropdown" style="background:#e8b844;">
-        <a class="nav-link text-white font-weight-bold" href="#" >
+        <a class="nav-link text-white font-weight-bold" style="cursor: pointer;" onclick="cargarDiv('#contenido','mapas.php');">
           Mapas
         </a>
        </li>
@@ -211,7 +211,31 @@
 <script src="bootstrap/js/popper.js/1.12.9/umd/popper.min.js" ></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+    <script>
+      function ejecuta_ajax(archivo, parametros, capa){
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
 
+        xmlhttp.onreadystatechange=function()
+        {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+        document.getElementById(capa).innerHTML=xmlhttp.responseText;
+        }
+        }
+
+        x = Math.random()*99999999;
+        xmlhttp.open("GET",archivo+"?"+parametros+"&x="+x, true);
+        xmlhttp.send();
+        }
+
+   </script>
 
 </body>
 </html>
